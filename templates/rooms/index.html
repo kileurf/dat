@@ -1,0 +1,17 @@
+{% extends 'base/index.html' %}
+
+{% block content %}
+    {% if latest_rooms_list %}
+        <div>
+        {% for room in latest_rooms_list %}
+            <div><a href="{% url 'rooms:modify_room' room.slug %}">{{ room.name }}</a></div>
+            <div><a href="{% url 'rooms:delete_room' room.slug %}"><span class="glyphicon glyphicon-remove" aria-hidden="true">delete</span></a></div>
+        {% endfor %}
+        </div>
+    {% else %}
+        <p>No rooms are available.</p>
+    {% endif %}
+
+    <a href="{% url 'rooms:create_room' %}">create room</a><br/>
+    <a href="{% url 'homepage' %}">homepage</a>
+{% endblock content %}

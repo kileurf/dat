@@ -1,0 +1,21 @@
+{% extends 'base/index.html' %}
+
+{% block content %}
+    {% if latest_infra_list %}
+        {% for infra in latest_infra_list %}
+        <div>
+            {% for key, value in infra.items %}
+                {% if key != 'id' %}
+                    <div><a href="{% url 'infras:modify_infra' infra.id %}">{{ key|cut:"__name" }} : {{ value }}</a></div>
+                {% endif %}
+            {% endfor %}
+            <div><a href="{% url 'infras:delete_infra' infra.id %}"><span class="glyphicon glyphicon-remove" aria-hidden="true">delete</span></a></div>
+        </div>
+        {% endfor %}
+    {% else %}
+        <p>No infra are available.</p>
+    {% endif %}
+
+    <a href="{% url 'infras:create_infra' %}">create Infra</a><br/>
+    <a href="{% url 'homepage' %}">Homepage</a>
+{% endblock content %}

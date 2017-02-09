@@ -1,0 +1,17 @@
+{% extends 'base/index.html' %}
+
+{% block content %}
+    {% if latest_clients_list %}
+        <div>
+        {% for client in latest_clients_list %}
+            <div><a href="{% url 'clients:modify_client' client.slug %}">{{ client.name }}</a></div>
+            <div><a href="{% url 'clients:delete_client' client.slug %}"><span class="glyphicon glyphicon-remove" aria-hidden="true">delete</span></a></div>
+        {% endfor %}
+        </div>
+    {% else %}
+        <p>No clients are available.</p>
+    {% endif %}
+
+    <a href="{% url 'clients:create_client' %}">create client</a><br/>
+    <a href="{% url 'homepage' %}">homepage</a>
+{% endblock content %}

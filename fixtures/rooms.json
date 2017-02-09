@@ -1,0 +1,52 @@
+[
+{
+  "model": "rooms.room",
+  "pk": 1,
+  "fields": {
+    "name": "Loos - Salle 1",
+    "address": "50.616765, 3.022312",
+    "create_date": "2017-01-01",
+    "slug": "loos-salle-1"
+  }
+},
+{
+  "model": "rooms.room",
+  "pk": 2,
+  "fields": {
+    "name": "Loos - Salle 2",
+    "address": "50.616975, 3.022165",
+    "create_date": "2017-01-01",
+    "slug": "loos-salle-2"
+  }
+},
+{
+  "model": "rooms.room",
+  "pk": 3,
+  "fields": {
+    "name": "Loos - Salle 3",
+    "address": "50.617740, 3.021497",
+    "create_date": "2017-01-01",
+    "slug": "loos-salle-3"
+  }
+},
+{
+  "model": "rooms.room",
+  "pk": 4,
+  "fields": {
+    "name": "Emerainville - Salle 1",
+    "address": "48.829401, 2.587316",
+    "create_date": "2017-01-01",
+    "slug": "emerainville-salle-1"
+  }
+},
+{
+  "model": "rooms.room",
+  "pk": 5,
+  "fields": {
+    "name": "Emerainville - Salle 2",
+    "address": "48.829277, 2.587311",
+    "create_date": "2017-01-01",
+    "slug": "emerainville-salle-2"
+  }
+}
+]
